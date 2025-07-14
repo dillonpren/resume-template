@@ -1,0 +1,204 @@
+%-------------------------
+% Resume in Latex
+% Author : Dillon Prendergast
+% Based off of: https://github.com/jakegut/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-12pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-12pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-4pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\newcommand{\resumeRoleWithDate}[2]{
+  \item\small{
+    \begin{tabular*}{\linewidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textit{#2} \\
+    \end{tabular*}
+    \vspace{-18pt}
+  }
+}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+  {\LARGE\textbf{Dillon P}} \\[4pt]
+    \href{mailto:x@x.com}{ dillon.jobs@gmail.com } \textbullet 
+    { (123) 456-7890 } \textbullet 
+    \href{https://linkedin.com/in/...}{ linkedin.com/in/dillon } \textbullet 
+    \href{https://github.com/...}{ github.com/dillon }
+    \\[2pt]
+    \small Software Engineer focuswed on cybersecurity, automation, and data enrichment. Proficient in Python application development, RESTful API design, and structured data processing. Skilled in translating technical insights into stakeholder-aligned solutions and leading cross-functional collaborations. Passionate about solving real-world problems through efficient software and impactful data. 
+\end{center}
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+\resumeSubHeadingListStart
+\resumeSubheading
+{Johns Hopkins University Applied Physics Lab}{Laurel, MD}
+{Cybersecurity Software Engineer}{June 2020 -- Present}
+\vspace{1pt}
+
+\resumeRoleWithDate{Project Lead — Systems Engineering}{}{}
+\begin{itemize}
+\resumeItem{Directed and actively contributed to comprehensive evaluations of system requirements and cybersecurity posture, leveraging log analysis and stakeholder feedback to deliver bi-monthly reports that informed security enhancements and ensured alignment with evolving program objectives.}
+\resumeItem{Led the development and approval of a research proposal to design and test a proof-of-concept workflow authenticating data exchanges with genomic sequencing systems using API gateways and digital signatures, enhancing security and integrity of biomedical research workflows; project planned to be open-sourced.}
+\end{itemize}
+
+\resumeRoleWithDate{Software Engineer — Full-Stack Development}{}{}
+\begin{itemize}
+\resumeItem{Developed a multi-threaded ZMQ socket manager in Python instrumented with OpenTelemetry to forward system messages between remote servers; integrated and correlated data from multiple APIs to enable real-time health metrics and search functionality, significantly enhancing user experience via an Angular monitoring web app.}
+\resumeItem{Refactored a legacy C backend into a modern stack using Python, SQLAlchemy, and FastAPI, improving scalability, reducing technical debt, and enabling seamless integration with an Angular frontend—resulting in faster feature delivery and enhanced system reliability.}
+\resumeItem{Built a text extraction pipeline with NLTK and regex incorporating automated self-validation to produce enriched, accurate datasets; integrated into SQLite and a Streamlit dashboard, providing sponsors novel, visualized, and queryable insights.}
+\end{itemize}
+
+\resumeRoleWithDate{Security Engineer — Secure Systems Architecture}{}{}
+\begin{itemize}
+\resumeItem{Designed and implemented an automated testing framework using Selenium to execute test plans against Kibana dashboards, reducing manual QA time for stakeholder teams and improving automation efficiency by 70\%.}
+\resumeItem{Supported a Zero Trust architecture assessment and directed the strategic scale-up of analysis networks toward enterprise-grade maturity, leveraging DoDCAR and the MITRE ATT\&CK framework to identify and prioritize security investments.}
+\end{itemize}
+
+\resumeSubHeadingListEnd
+\section{Projects}
+\resumeSubHeadingListStart
+\resumeProjectHeading
+{\textbf{Trading Card Sales Automation}}{\textit{January 2025 -- Present}}
+\begin{itemize}
+\resumeItem{Built an automated pipeline in Google Apps Script to generate product listings by parsing metadata and pricing from item photos and URLs; enabled 100+ monthly sales with 100\% customer satisfaction.}
+\end{itemize}
+
+\resumeProjectHeading
+{\textbf{Mancala AI — Reinforcement Learning Course Project}}{\textit{February 2021 -- April 2021}}
+\begin{itemize}
+\resumeItem{Built a Mancala game engine and implemented Monte Carlo, Q-Learning, and Temporal Difference algorithms to evaluate learning efficiency in gameplay strategy with performance metrics across training episodes.}
+\end{itemize}
+\resumeSubHeadingListEnd
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Florida State University}{Tallahassee, FL}
+      {Master of Science in Computer Science}{January 2019 -- May 2020}
+      \resumeSubSubheading
+      {Bachelor of Science in Computer Science}{August 2015 -- December 2018}
+  \resumeSubHeadingListEnd
+
+%
+% %-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+\small{\item{
+\textbf{Programming \& Scripting}{: Python, JavaScript, TypeScript, SQL, Regex, Bash, LaTeX} \\
+\textbf{Frameworks \& Libraries}{: Angular, Django, FastAPI, Streamlit, SQLAlchemy, NLTK, Pandas, Selenium} \\
+\textbf{Databases \& Tools}{: SQLite, MongoDB, Git, Docker, Kibana} \\
+\textbf{DevOps, Security \& Architecture}{: GitLab CI/CD, REST APIs, Zero Trust, DoDCAR, MITRE ATT\&CK} \\
+\textbf{Specialties}{: Reinforcement Learning, Web Scraping, Data Extraction, Automation, Customer-Facing Dashboards}
+}}
+\end{itemize}
+
+\section*{Languages}
+\begin{itemize}[leftmargin=0.15in, label={}]
+\small{\item{
+\textbf{English}{: Native} $|$ \
+\textbf{German}{: B1} $|$ \
+\textbf{Brazilian Portuguese}{: A2}
+}}
+\end{itemize}
+
+%-------------------------------------------
+\end{document}
